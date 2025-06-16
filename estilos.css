@@ -1,0 +1,72 @@
+/* Selectores: etiqueta descendente, ID y class */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+/* ID */
+#titulo {
+    text-align: center;
+    color: darkblue;
+}
+
+/* Class */
+.contenedor {
+    margin: 50px auto;
+    width: 80%;
+    padding: 20px;
+}
+
+/* Descendente: botones dentro de .contenedor */
+.contenedor .botones {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Pseudoclases para botones */
+.btn {
+    padding: 10px 20px;
+    background-color: lightblue;
+    text-decoration: none;
+    color: black;
+    border-radius: 8px;
+    border: 1px solid #888;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: skyblue;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.btn:focus {
+    outline: 2px solid blue;
+}
+
+.btn:visited {
+    color: purple;
+}
+
+/* Pseudoclase distinta para pagina3 */
+.btn.especial::after {
+    content: " ⭐";
+}
+
+/* Flex aplicado a página1 */
+#contenedor-flex .botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/* Grid aplicado a página2 y página3 */
+#contenedor-grid .botones {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
